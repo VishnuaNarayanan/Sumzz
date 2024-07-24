@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffecd2;
+            background-image: linear-gradient(45deg, #ffecd2, #fcb69f);
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 3em;
+            animation: slideInFromTop 1s ease-in-out;
+        }
+        p {
+            color: #333333;
+            font-size: 1.2em;
+        }
+        .image {
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #4a4a4a;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .balloons {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+            margin: 0 10px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) {
+            background-color: #ffe066;
+            animation-delay: 2s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #ff8b94;
+            animation-delay: 4s;
+        }
+        .balloon:nth-child(4) {
+            background-color: #42a5f5;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(5) {
+            background-color: #66bb6a;
+            animation-delay: 3s;
+        }
+        .balloon:nth-child(6) {
+            background-color: #ab47bc;
+            animation-delay: 5s;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .glitter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .glitter div {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: fall linear infinite;
+        }
+        .glitter div:nth-child(odd) {
+            width: 5px;
+            height: 5px;
+            animation-duration: 5s;
+        }
+        .glitter div:nth-child(even) {
+            animation-duration: 7s;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <div class="glitter">
+        <div style="left: 10%;"></div>
+        <div style="left: 20%;"></div>
+        <div style="left: 30%;"></div>
+        <div style="left: 40%;"></div>
+        <div style="left: 50%;"></div>
+        <div style="left: 60%;"></div>
+        <div style="left: 70%;"></div>
+        <div style="left: 80%;"></div>
+        <div style="left: 90%;"></div>
+    </div>
+    <div class="container">
+        <h1>Happy Birthday, SUMZZ!</h1>
+        <div class="image">
+            <img src="FB_IMG_1721665811050.jpg" alt="Birthday Image">
+        </div>
+        <p>Wishing you all the best on your special day!</p>
+        <div class="message">
+            <p>Dear Sumi Chechi,</p>
+            <p>On this wonderful day, we just want to remind you how special you are and how much you mean to us. Happy Birthday! May your day be filled with joy, love, and everything you wish for.</p>
+            <p>Love, Cousins</p>
+        </div>
+    </div>
+</body>
+</html>
